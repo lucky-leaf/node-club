@@ -14,4 +14,4 @@ const commentSchema=new Schema({
 
 commentSchema.index({topicId:1,updatedTime:1});
 
-module.exports=mongoose.model('Comment',commentSchema);
+module.exports=model('Comment',commentSchema);
