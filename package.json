@@ -1,42 +1,35 @@
 {
   "name": "node-club",
-  "version": "1.0.0",
-  "description": "koa2",
+  "version": "0.0.1",
+  "description": "node-club",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "null"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lucky-leaf/node-club.git"
+    "url": "git+https://github.com/shunkie/node-club.git"
   },
   "keywords": [
-    "koa2",
-    "mongodb"
+    "node-club"
   ],
-  "author": "lucky-leaf",
-  "license": "ISC",
+  "author": "shunkie",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucky-leaf/node-club/issues"
+    "url": "https://github.com/shunkie/node-club/issues"
   },
-  "homepage": "https://github.com/lucky-leaf/node-club#readme",
+  "homepage": "https://github.com/shunkie/node-club#readme",
   "dependencies": {
-    "config-lite": "^2.1.0",
-    "koa-bodyparser": "^4.2.0",
-    "koa-cache": "^0.1.0",
-    "koa-compress": "^2.0.0",
-    "koa-ejs": "^4.1.0",
-    "koa-errorhandler": "^0.1.1",
-    "koa-flash": "^1.0.0",
-    "koa-frouter": "^0.5.0",
-    "koa-generic-session": "^2.0.1",
-    "koa-generic-session-mongo": "^0.4.0",
-    "koa-logger": "^3.1.0",
-    "koa-router-cache": "^2.0.0",
-    "koa-scheme": "^2.2.1",
-    "koa-static-cache": "^5.1.2",
-    "merge-descriptors": "^1.0.1",
-    "mongoose": "^5.0.9",
-    "validator": "^9.4.1"
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "mongoose": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
   }
 }
