@@ -1,5 +1,5 @@
 module.exports = (router) => {
   router.get('/', async (ctx) => {
-    await ctx.render('base')
+    await ctx.render('index')
   })
 }

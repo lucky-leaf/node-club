@@ -1,0 +1,17 @@
+.main {
+  display: flex;
+  width: 100vw;
+  height: 90vh;
+  align-items: center;
+  align-content: center;
+}
+
+.signin-box {
+  width: 400px;
+  margin: auto;
+}
+
+.signup-box {
+  width: 400px;
+  margin: auto;
+}

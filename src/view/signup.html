@@ -1,41 +1,39 @@
 {% extends "base.html" %}
 {% block body %}
-<section class="container">
-  <div class="box">
+  <div class="box is-radiusless signup-box">
     <form action="/signup" method="POST">
       <div class="field">
         <label for="" class="label">用户名</label>
         <div class="control">
-          <input type="text" class="input" name="name">
+          <input type="text" class="input is-radiusless is-primary" name="name">
         </div>
       </div>
       <div class="field">
         <label for="" class="label">邮箱</label>
         <div class="control">
-          <input type="email" class="input" name="email">
+          <input type="email" class="input is-radiusless is-primary" name="email">
         </div>
       </div>
       <div class="field">
         <label for="" class="label">密码</label>
         <div class="control">
-          <input type="password" class="input" name="password">
+          <input type="password" class="input is-radiusless is-primary" name="password">
         </div>
       </div>
       <div class="field">
-        <label for="" class="label">重复密码</label>
+        <label for="" class="label">确认密码</label>
         <div class="control">
-          <input type="password" class="input" name="repassword">
+          <input type="password" class="input is-radiusless is-primary" name="repassword">
         </div>
       </div>
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-danger">注册</button>
+          <button class="button is-primary is-radiusless">注册</button>
         </div>
         <div class="control">
-          <a href="/signin" class="button is-text">已有账号，去登录</a>
+          <a href="/signin" class="button is-success is-radiusless">已有账号，去登录</a>
         </div>
       </div>
     </form>
   </div>
-</section>
 {% endblock %}

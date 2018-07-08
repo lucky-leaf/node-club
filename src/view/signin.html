@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block body %}
+<div class="box is-radiusless signin-box">
+  <form action="/signin" method="POST">
+    <div class="field">
+      <label for="" class="label">用户名</label>
+      <div class="control">
+        <input type="text" class="input is-radiusless is-success" name="name">
+      </div>
+    </div>
+    <div class="field">
+      <label for="" class="label">密码</label>
+      <div class="control">
+        <input type="password" class="input is-radiusless is-success" name="password">
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-success is-radiusless">登录</button>
+      </div>
+      <div class="control">
+          <a href="/signup" class="button is-primary is-radiusless">没有账号，去注册</a>
+        </div>
+    </div>
+  </form>
+</div>
+{% endblock %}
