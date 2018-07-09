@@ -19,7 +19,10 @@ module.exports = (router) => {
       ctx.body = '密码错误'
       return undefined
     }
-    ctx.session.user = user.name
-    await ctx.render('index', { name })
+    ctx.session.user = {
+      name: user.name,
+      email: user.email
+    }
+    await ctx.redirect('/', { user: ctx.session.user })
   })
 }

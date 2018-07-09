@@ -1,5 +1,6 @@
 module.exports = (router) => {
   router.get('/', async (ctx) => {
-    await ctx.render('index')
+    const user = ctx.session.user
+    await ctx.render('index', { user })
   })
 }

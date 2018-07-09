@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
   <meta charset="UTF-8">
@@ -11,10 +11,16 @@
 </head>
 
 <body>
-  {% include "header.html" %}
-  <main class="main">
-    {% block body %} {% endblock %}
-  </main>
+  <section class="hero is-fullheight is-dark">
+    <header class="hero-head">
+      {% include "header.html" %}
+    </header>
+    <main class="hero-body">
+      {% block main %}
+        <h1>Home</h1>
+      {% endblock %}
+    </main>
+  </section>
 </body>
 
 </html>

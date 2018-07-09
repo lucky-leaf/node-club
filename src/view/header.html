@@ -1,31 +1,29 @@
-<header class="header">
-  <nav class="navbar has-shadow">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma" width="112" height="28">
-      </a>
-    </div>
-    <div class="navbar-menu is-active">
-      <div class="navbar-start">
+<nav class="navbar has-shadow">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma" width="112" height="28">
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start">
 
-      </div>
-      <div class="navbar-end">
-        {% if name %}
-        <div class="navbar-item">
-          {{ name }}
-        </div>
-        <div class="navbar-item">
-          <a href="/signout" class="button">退出</a>
-        </div>
-        {% else %}
-        <div class="navbar-item">
-            <a class="button is-primary is-radiusless" href="/signup">注册</a>
-          </div>
-          <div class="navbar-item">
-            <a class="button is-success is-radiusless" href="/signin">登录</a>
-          </div>
-        {% endif %}
-      </div>
     </div>
-  </nav>
-</header>
+    <div class="navbar-end">
+      {% if user %}
+      <div class="navbar-item">
+        {{ user.name }}
+      </div>
+      <div class="navbar-item">
+        <a href="/signout" class="button is-danger is-radiusless">退出</a>
+      </div>
+      {% else %}
+      <div class="navbar-item">
+        <a class="button is-primary is-radiusless" href="/signup">注册</a>
+      </div>
+      <div class="navbar-item">
+        <a class="button is-success is-radiusless" href="/signin">登录</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</nav>
