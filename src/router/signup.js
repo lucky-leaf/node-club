@@ -11,8 +11,10 @@ module.exports = (router) => {
   router.post('/signup', async (ctx) => {
     let { name, email, password, repassword } = ctx.request.body
     if (password !== repassword) {
-      await ctx.render('signup')
-      return undefined
+      ctx.flash = {
+        error: '密码不一致，请重新输入'
+      }
+      return ctx.redirect('back')
     }
     const salt = await bcrypt.genSalt(10)
     password = await bcrypt.hash(password, salt)

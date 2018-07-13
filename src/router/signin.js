@@ -12,17 +12,26 @@ module.exports = (router) => {
     const { name, password } = ctx.request.body
     const user = await UserService.findUser({ name })
     if (!user) {
-      ctx.body = '该用户不存在'
-      return undefined
+      ctx.flash = {
+        error: '用户名不存在！'
+      }
+      await ctx.render('signin')
+      return
     }
     if (!(await bcrypt.compare(password, user.password))) {
-      ctx.body = '密码错误'
-      return undefined
+      ctx.flash = {
+        error: '密码错误！'
+      }
+      await ctx.render('signin')
+      return
     }
     ctx.session.user = {
       name: user.name,
       email: user.email
     }
-    await ctx.redirect('/', { user: ctx.session.user })
+    ctx.flash = {
+      success: '登录成功！'
+    }
+    await ctx.render('signin')
   })
 }

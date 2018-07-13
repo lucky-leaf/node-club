@@ -11,16 +11,16 @@
 </head>
 
 <body>
-  <section class="hero is-fullheight is-dark">
-    <header class="hero-head">
-      {% include "header.html" %}
-    </header>
-    <main class="hero-body">
-      {% block main %}
-        <h1>Home</h1>
-      {% endblock %}
-    </main>
-  </section>
+  <header class="x-header">
+    {% include "header.html" %}
+  </header>
+  <main class="x-main">
+    {% block main %}
+    {% endblock %}
+  </main>
+  <footer>
+
+  </footer>
 </body>
 
 </html>
