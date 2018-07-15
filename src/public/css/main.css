@@ -48,7 +48,7 @@ body {
   margin-right: auto;
 }
 
-.x-header .x-nav .button + .button {
+.x-header .x-nav .x-nav-item + .x-nav-item {
   margin-left: 1rem;
 }
 

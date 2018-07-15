@@ -10,3 +10,4 @@ const connection = mongoose.connection
 connection.on('error', console.error.bind(console, 'connected failed!'))
 
 exports.User = require('./user')
+exports.Post = require('./post')

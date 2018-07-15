@@ -1,14 +1,12 @@
 const Router = require('koa-router')
 const router = new Router()
+const { home, sign } = require('../controller')
 
-const home = require('./home')
-const signin = require('./signin')
-const signup = require('./signup')
-const signout = require('./signout')
-
-home(router)
-signin(router)
-signup(router)
-signout(router)
+router.get('/', home.index)
+router.get('/signin', sign.signinGet)
+router.post('/signin', sign.signinPost)
+router.get('/signup', sign.signupGet)
+router.post('/signup', sign.signupPost)
+router.get('/signout', sign.signout)
 
 module.exports = router
