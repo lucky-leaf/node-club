@@ -64,3 +64,47 @@ body {
   padding: 50px;
   margin: auto;
 }
+
+/* 新建文章页 */
+.editor-box {
+  width: 1024px;
+  margin: 10px auto;
+}
+
+.editor-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-box .editor-header {
+  display: flex;
+  height: 36px;
+  align-items: center;
+}
+
+.editor-box .editor-header .x-input {
+  width: 90%;
+  line-height: 36px;
+  height: 36px;
+  margin-right: auto;
+}
+
+.editor-box .editor-body {
+  margin-top: 10px;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.editor-box .editor-body .editor {
+  flex: 1;
+  outline: none;
+  border: 1px solid #9E9E9E;
+  min-height: 580px;
+}
+
+.editor-box .editor-body .output {
+  flex: 1;
+  border: 1px solid #9E9E9E;
+  border-left: none;
+}

@@ -1,7 +1,7 @@
-const home = {
-  index: async (ctx) => {
-    await ctx.render('home')
+module.exports = {
+  index: async ctx => {
+    await ctx.render('home', {
+      title: '主页'
+    })
   }
 }
-
-module.exports = home
